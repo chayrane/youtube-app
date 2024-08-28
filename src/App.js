@@ -1,12 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 function App() {
   return (
+    <Provider store={store}>
     <div>
-      
+      {/**
+       * ******** App Structure ********
+       *
+       * Header
+       * Body
+       *  Sidebar
+       *    MenuItems
+       *  MainContianer
+       *    ButtonList
+       *    VideoContianer
+       *      VideoCard
+       */}
+
+      <Header />
+      <Body />
     </div>
+    </Provider>
   );
 }
 
